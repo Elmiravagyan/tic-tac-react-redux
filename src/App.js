@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
-import XIcon from './components/xIcon';
-import OIcon from './components/oIcon';
-
+import React from 'react';
+import Board from './components/board';
+import Result from './components/results';
+import styled from 'styled-components';
 import './App.css';
 
-class App extends Component {
-  render() {
+const App = ({className}) => {
     return (
-      <div className="App" style={{marginTop: "20px"}}>
-          Initial version of tic-tac-toe
-          <OIcon/>
-      </div>
+        <div className={className}>
+            <Result/>
+            <Board />
+        </div>
     );
-  }
 }
 
-export default App;
+export default styled(App)`
+  font-family: Courier New, Courier, monospace;
+  margin: 0 auto;
+  width: 200px;
+`;
